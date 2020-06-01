@@ -1,0 +1,263 @@
+div img {
+    display: block;
+    max-width: 100%;
+}
+
+#s4 {
+    position: relative;
+}
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 32px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 35px;
+}
+
+.arrow a,
+.arrow img {
+    display: block;
+    width: 100%;
+}
+
+#s4 .container {
+/*    max-height: 100vh;*/
+}
+
+#slider-02 .slick-list {
+    background-color: #539b8d;
+    background-image: url("../img/map-06.svg");
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.slider .item {
+    position: relative;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100vw;
+}
+
+.slider .img-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.slider .img-box img {
+    /* Для заповнення ілюстрацією батьківського контейнера   */
+    /* Застосовуємо власт. object-fit  */
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Якщо потрібно інакше позиціонувати ілюстрацію */
+/* (стосується в першу чергу телефонів) */
+/* додавайте додатковий клас в html */
+/* і описуйте в css інакше позиціонування */
+.slider .img-box.pos-bottom img {
+    object-position: center bottom;
+}
+
+.slider .img-box.pos-left img {
+    object-position: left center;
+}
+
+.slider .caption {
+    width: 50%;
+    flex-basis: 50%;
+    padding: 60px 25px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.caption h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5vw;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    line-height: 1;
+    font-weight: 700;
+    text-align: right;
+    max-width: 70%;
+}
+
+.caption h3 span {
+    background-color: #539b8d;
+    position: relative;
+    display: inline-block;
+    color: #055;
+    vertical-align: top;
+    line-height: .8;
+    font-size: 2.75em;
+    z-index: 1;
+}
+
+.caption p {
+    border-right-style: dashed;
+    border-right-width: 2px;
+    border-right-color: rgba(255, 255, 255, .6);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: .01em;
+    max-width: 320px;
+    padding-top: 60px;
+    padding-right: 20px;
+    position: relative;
+    margin-top: -40px;
+}
+
+.caption p:before {
+    background-image: url("../img/navigation24.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    /*    background-size: contain;*/
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    border-bottom-style: dashed;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(255, 255, 255, .6);
+    border-radius: 0 0 0 20px;
+    width: 60vw;
+    height: 50px;
+    z-index: 0;
+    overflow: visible;
+}
+
+.caption p:after {
+    background-color: rgba(255, 255, 255, 1);
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%) translateX(1px);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media screen and (orientation: portrait) {
+
+    #slider-02 .slick-list {
+        background-size: contain;
+        background-position: right top;
+    }
+
+    .slider .item {
+        justify-content: center;
+    }
+
+    .slider .img-box {
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+    }
+
+    .slider .caption {
+        width: 100%;
+        max-height: 50%;
+        height: 50%;
+        justify-content: center;
+        flex-basis: 100%;
+        padding: 25px 25px;
+    }
+
+    .caption h3 {
+        max-width: 100%;
+        font-size: 8vw;
+    }
+
+    .caption p {
+        border-top-style: dashed;
+        border-top-width: 2px;
+        border-top-color: rgba(255, 255, 255, .6);
+        border-right-style: dashed;
+        border-right-width: 2px;
+        border-right-color: rgba(255, 255, 255, .6);
+        font-size: 1rem;
+        line-height: 1.4;
+        max-width: 350px;
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-top: -20px;
+    }
+
+    .caption p:before {
+        background-image: url("../img/navigation24.png");
+        background-position: right bottom;
+        /*    background-size: contain;*/
+        content: "";
+        display: block;
+        right: auto;
+        left: 0;
+        bottom: auto;
+        top: 0;
+        border-left-style: dashed;
+        border-left-width: 2px;
+        border-left-color: rgba(255, 255, 255, .6);
+        border-bottom-style: dashed;
+        border-bottom-width: 2px;
+        border-bottom-color: rgba(255, 255, 255, .6);
+        border-radius: 0 0 20px 0;
+        width: 55%;
+/*        height: 50vh;*/
+        height:50vh;
+        height: calc(var(--vh, 1vh) * 50);
+    }
+
+    .caption p:after {
+        background-color: rgba(255, 255, 255, 1);
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateX(50%) translateX(1px);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width:767px) and (orientation: portrait) {
+    .caption p:before {
+        height: 40vh;
+        height: calc(var(--vh, 1vh) * 45);
+/*        height:45%;*/
+    }
+    .caption h3 {
+        font-size: 7vw;
+    }
+    .caption p {
+        font-size: .85rem;
+        line-height: 1.3;
+        padding-top: 20px;
+        margin-top: -20px;
+    }
+}

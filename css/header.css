@@ -1,0 +1,253 @@
+header {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background-position: center;
+    position: relative;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    /*    min-height: 22vw;*/
+}
+
+.wave:after {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: #539b8d;
+    /*    min-height: 10px;*/
+    position: absolute;
+    left: 0;
+    top: 19vw;
+    bottom: 0;
+
+}
+
+header .arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 32px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 25px;
+
+}
+
+.arrow a,
+.arrow img {
+    display: block;
+    width: 100%;
+}
+
+
+
+.overlay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    padding: 25px 60px 60px 25px;
+    height: 100%;
+
+
+    -webkit-animation: titleAnimation 1s cubic-bezier(.04, .48, .7, .99);
+    -moz-animation: titleAnimation 1s cubic-bezier(.04, .48, .7, .99);
+    -o-animation: titleAnimation 1s cubic-bezier(.04, .48, .7, .99);
+    -ms-animation: titleAnimation 1s cubic-bezier(.04, .48, .7, .99);
+    animation: titleAnimation 1s cubic-bezier(.04, .48, .7, .99);
+    z-index: 1000;
+}
+
+.norway {
+    margin-left: 7vw;
+}
+
+
+.overlay h1 {
+    letter-spacing: .07em;
+    font-size: 6.09vw;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+
+}
+
+.overlay h1 span {
+    display: inline-block;
+}
+
+
+.overlay h1 .svg-box {
+    width: .55em;
+    margin-right: 0.1em;
+}
+
+.picto {
+    position: absolute;
+    right: 0;
+    top: 54%;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+    transform: translateY(-50%);
+    margin-right: 50px;
+}
+
+.picto a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: none;
+    margin-bottom: 12px;
+}
+
+
+.slideshow {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.norway h2 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.1vw;
+    line-height: 1.2;
+
+}
+
+.norway h2 span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: block;
+    margin-right: 0.05em;
+    font-size: 7vw;
+    opacity: 55%;
+    color: #FF7A3A;
+    line-height: 0.9;
+}
+
+.norway p {
+    max-width: 540px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.1vw;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    color: #fff;
+
+}
+
+@media screen and (max-width:768px) and (orientation:portrait) {
+
+    .norway h1 {
+        font-size: 12.3vw;
+    }
+
+    .norway h2 {
+        font-size: 2.8vw;
+    }
+
+    .norway h2 span {
+        font-size: 12vw;
+    }
+
+    .norway p {
+        font-size: 2.8vw;
+    }
+    
+    .wave {
+        height: 25%;
+    }
+}
+
+@media screen and (max-width:1024px) and (orientation:landscape) {
+
+    .norway h2 {
+        font-size: 1.7vw;
+    }
+
+    .norway p {
+        max-width: 360px;
+        font-size: 1.7vw;
+    }
+}
+
+@media screen and (max-width:740px) and (orientation:portrait) {
+    .overlay {
+        align-items: flex-end;
+    }
+
+    .norway {
+        margin-left: 0;
+    }
+
+    .norway h1 {
+        margin-bottom: 0.3em;
+        margin-top: 1em;
+    }
+
+    .norway p {
+        max-width: 360px;
+        font-size: .9rem;
+        line-height: 1.35;
+    }
+
+    .picto {
+        margin-right: 20px;
+        bottom: 40px;
+        top: auto;
+        transform: none;
+    }
+
+    .picto a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .wave {
+        height: 42%;
+    }
+
+    .arrow {
+        width: 27px;
+    }
+
+
+    .slideshow {
+        height: 70%;
+    }
+
+    .norway h2 {
+        font-size: 0.7rem;
+
+    }
+
+    .norway h2 span {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width:740px) and (orientation:landscape) {
+
+    .norway p {
+        max-width: 230px;
+    }
+
+}

@@ -1,0 +1,184 @@
+.information {
+    background-color: #539b8d;
+    background-repeat: no-repeat;
+/*    min-height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100);
+    background-image: url("../img/map5.svg");
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-position: right top;
+}
+
+.points {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35%;
+}
+
+.navigpic3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13%;
+    margin-right: 450px;
+    margin-top: 160px;
+}
+
+.button1 {
+    position: absolute;
+    bottom: 23%;
+    left: 35%;
+    width: 30%;
+    cursor: pointer;
+}
+
+.info h1 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .05em;
+    font-size: 5.09vw;
+    line-height: 1;
+    color: #fff;
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 180px;
+}
+
+.info h2 {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 550px;
+    font-weight: 200;
+    font-size: 1.10vw;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+    color: #fff;
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+.info p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5vw;
+    color: #055;
+    text-align: center;
+    padding-top: 230px;
+
+}
+
+
+@media screen and (max-width:768px) and (orientation:portrait) {
+
+    .points {
+        width: 70%;
+    }
+
+    .navigpic3 {
+        display: none;
+    }
+
+    .button1 {
+        bottom: 40%;
+        left: 18%;
+        width: 40%;
+    }
+
+    .info h1 {
+        font-size: 9vw;
+        padding-top: 100px;
+        padding-left: 140px;
+    }
+
+    .info h2 {
+        font-size: 2.7vw;
+        padding-left: 160px;
+        padding-top: 60px;
+    }
+
+    .info p {
+        text-align: left;
+        font-size: 4.5vw;
+        padding-top: 240px;
+        padding-left: 145px;
+    }
+
+}
+
+@media screen and (max-width:1024px) and (orientation: landscape) {
+
+    .navigpic3 {
+        display: none;
+    }
+
+    .info h2 {
+        font-size: 1.7vw;
+    }
+
+    .info p {
+        font-size: 3vw;
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width:740px) and (orientation:portrait) {
+
+    .information {
+        background-position: right top;
+    }
+
+    .points {
+        width: 70%;
+    }
+
+    .navigpic3 {
+        display: none;
+    }
+
+    .button1 {
+        bottom: 38%;
+        left: 13%;
+        width: 55%;
+    }
+
+    .info h1 {
+        font-size: 9vw;
+        padding-top: 80px;
+        padding-left: 50px;
+    }
+
+    .info h2 {
+        font-size: .9rem;
+        line-height: 1.65;
+        padding-left: 60px;
+        padding-top: 30px;
+    }
+
+    .info p {
+        font-size: 6vw;
+        padding-top: 130px;
+        padding-left: 60px;
+    }
+
+}
+
+@media screen and (max-width:1300px) and (orientation:landscape) {
+    
+    .info h1 {
+        font-size: 5vw;
+        padding-top: 50px;
+        padding-left: 35%;
+    }
+    
+    .info h2 {
+        padding-left: 37.5%;
+        padding-top: 20px;
+    }
+    
+    .info p {
+        font-size: 3.5vw;
+        padding-top: 105px;
+    }
+}
+
+
+

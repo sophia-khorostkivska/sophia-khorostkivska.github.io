@@ -1,0 +1,162 @@
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9995;
+}
+
+nav .navbar {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: auto;
+    width: 100%;
+}
+
+.navigation {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navigation ul {
+    display: flex;
+    font-size: 1.5rem;
+    letter-spacing: .05em;
+    list-style: none;
+    color: #fff;
+    background-color: #5EA89A;
+    position: absolute;
+    padding: 100px 30px 30px 30px;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    min-width: 50%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    transform: translateX(100%);
+    transition: all 0.5s;
+    opacity: 0;
+    transition-property: transform;
+    transition-duration: .35s;
+    transition-timing-function: ease;
+    z-index: 9998;
+}
+
+
+.navigation.open ul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+nav a {
+    color: white;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navigation li a {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 10px 0 10px 50px;
+    position: relative;
+}
+
+.navigation li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background-color: #5EA89A;
+    border-radius: 6px;
+}
+
+.navigation li a::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+a.tour::after {
+    background-image: url(../img/tur.svg);
+}
+
+a.route::after {
+    background-image: url(../img/marshrut.svg);
+}
+
+a.info::after {
+    background-image: url(../img/info.svg);
+}
+
+.navigation li a:hover::before {
+    background-color: #FF7A3A;
+}
+
+.navigation button {
+    position: relative;
+    display: block;
+    margin: 0;
+    z-index: 9999;
+    background: none;
+    border: none;
+    outline: none;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+
+.navigation.open .overlay {
+    background-color: rgba(10, 10, 10, .3);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+/*    min-height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100);
+    z-index: 9997;
+}
+
+@media screen and (max-width:740px) and (orientation:portrait) {
+
+    .navigation button {
+        margin-right: 20px;
+    }
+
+    #top .navigation ul {
+        transform: translateX(0);
+        opacity: 1;
+        min-width: 0;
+        height:auto;
+        min-height: 0;
+        background-color: transparent;
+        padding-top: 20px;
+        padding-right: 0;
+    }
+
+    #top .navigation button {
+        display: none;
+    }
+
+    .navigation li a {
+        font-size: 0;
+        width: 36px;
+        height: 36px;
+        margin-bottom: 15px; 
+        
+    }
+}
